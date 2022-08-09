@@ -1,7 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit';
 
 
-import heroes from '../reducers/heroes';
+import heroes from '../components/heroesList/heroesSlice';
 import filters from '../reducers/filters';
 
 const stringMiddleware = () => (next) => (action) => {
@@ -12,9 +12,6 @@ const stringMiddleware = () => (next) => (action) => {
      }
      return next(action)
 } 
-
-
-
 // const store = createStore(
 //                     combineReducers({heroes, filters}),
 //                     compose(applyMiddleware(ReduxThunk, stringMiddleware),
